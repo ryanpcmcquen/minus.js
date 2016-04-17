@@ -1,4 +1,4 @@
-/*! minus.js v0.1.0 by ryanpcmcquen*/
+/*! minus.js v0.1.0 by ryanpcmcquen */
 /*global window*/
 /*jslint browser:true, white:true*/
 
