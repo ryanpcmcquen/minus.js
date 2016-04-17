@@ -1,0 +1,23 @@
+{
+
+  "manifest_version": 2,
+
+  "name": "minus.js",
+  "description": "A whole host of JS shortcuts, for the DOM hacker.",
+  "version": "0.1.0",
+
+  "content_scripts": [{
+    "run_at": "document_end",
+    "matches": ["<all_urls>"],
+    "js": [
+      "minus.js",
+      "attachIt.js"
+    ]
+  }],
+
+  "web_accessible_resources": [
+    "minus.js",
+    "attachIt.js"
+  ]
+
+}
