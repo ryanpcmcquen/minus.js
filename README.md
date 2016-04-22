@@ -31,3 +31,20 @@ Modern JavaScript minus all the typing.
 
 Pull requests and feedback are welcome.
 
+
+### Examples
+
+```javascript
+m.eq(m.d.body, '.baz');
+
+m.eqa(m.d.body, '.baz');
+
+m.q('.foo.bar');
+
+m.qa('.bar.baz');
+
+m.ael(EVENT, CALLBACK);
+```
+
+...
+
