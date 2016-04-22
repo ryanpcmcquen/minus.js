@@ -1,42 +1,35 @@
-/*! minus.js v0.1.0 by ryanpcmcquen */
+/*! minus.js v0.2.0 by ryanpcmcquen */
+
 /*global window*/
-/*jslint browser:true, white:true*/
+/*jslint browser:true, white:true, es6:true*/
 
 (function () {
+
   'use strict';
 
-
-  var m = {};
+  const m = {};
 
   m.d = document;
   m.o = Object;
   m.ap = Array.prototype;
 
-  m.qs = function (s) {
-    return m.d.querySelector(s);
-  };
+  m.eq = (e, s) => e.querySelector(s);
+  m.eqa = (e, s) => e.querySelectorAll(s);
 
-  m.qsa = function (s) {
-    return m.d.querySelectorAll(s);
-  };
+  m.q = (s) => m.eq(m.d, s);
+  m.qa = (s) => m.eqa(m.d, s);
 
-  m.ael = function (s, e, c) {
-    return s.addEventListener(e, c);
-  };
+  m.ael = (s, e, c) => s.addEventListener(e, c);
 
-  m.oc = function (p, o) {
-    return m.o.create(p, o);
-  };
+  m.oc = (p, o) => m.o.create(p, o);
+  m.ok = (o) => m.o.keys(o);
 
-  m.ok = function (o) {
-    return m.o.keys(o);
-  };
+  m.apsc = (a, s = 0, e = undefined) => m.ap.slice.call(a, s, e);
 
-  m.apsc = function (a, s, e) {
-    s = s || 0;
-    e = e || undefined;
-    return m.ap.slice.call(a, s, e);
-  };
+  m.qs = m.q;
+  m.qsa = m.qa;
+  m.eqs = m.eq;
+  m.eqsa = m.eqa;
 
   window.m = m;
   return m;

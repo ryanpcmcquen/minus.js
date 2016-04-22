@@ -11,9 +11,13 @@ Modern JavaScript minus all the typing.
     
     `m.ap` for `Array.prototype`
     
-    `m.qs` for `querySelector`
+    `m.eq` or `m.eqs` for `ELEMENT.querySelector`
     
-    `m.qsa` for `querySelectorAll`
+    `m.eqa` or `m.eqsa` for `ELEMENT.querySelectorAll`
+    
+    `m.q` or `m.qs` for `document.querySelector`
+    
+    `m.qa` or `m.qsa` for `document.querySelectorAll`
     
     `m.ael` for `addEventListener`
     
@@ -26,3 +30,4 @@ Modern JavaScript minus all the typing.
   2. Make debugging apps from the console far faster. If using `minus` as a Chrome extension, you'll have access to all the `m` methods right from the browser `console`.
 
 Pull requests and feedback are welcome.
+
