@@ -1,4 +1,4 @@
-/*! minus.js v0.2.0 by ryanpcmcquen */
+/*! minus.js v0.2.1 by ryanpcmcquen */
 
 /*global window*/
 /*jslint browser:true, white:true, es6:true*/
@@ -31,7 +31,12 @@
   m.eqs = m.eq;
   m.eqsa = m.eqa;
 
-  window.m = m;
+  if (!window.m) {
+    window.m = m;
+  } else {
+    console.warn("You already have a global object named 'm'. \n 'minus.js' has gracefully shown itself the door.");
+  }
+
   return m;
 
 }());
