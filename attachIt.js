@@ -1,5 +1,7 @@
-/*! attachIt.js v0.2.1 by ryanpcmcquen */
-(function () {
+/*! attachIt.js v0.3.0 by ryanpcmcquen */
+/*jshint esversion:6*/
+(() => {
+  'use strict';
   const attachIt = (s) => {
     const xhr = new XMLHttpRequest();
     xhr.open('get', chrome.extension.getURL(s), true);
@@ -12,4 +14,4 @@
     xhr.send();
   };
   attachIt('minus.js');
-}());
+})();
