@@ -43,7 +43,7 @@ m.q('.foo.bar');
 
 m.qa('.bar.baz');
 
-m.ael(EVENT, CALLBACK);
+m.ael(SELECTOR, EVENT, CALLBACK);
 ```
 
 ...
