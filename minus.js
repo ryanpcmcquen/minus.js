@@ -1,7 +1,5 @@
-/*! minus.js v0.3.0 by ryanpcmcquen */
-
+/*! minus.js v0.4.0 by ryanpcmcquen */
 /*jshint esversion:6*/
-
 (() => {
 
   'use strict';
@@ -30,18 +28,20 @@
   m.eqs = m.eq;
   m.eqsa = m.eqa;
 
-  const infoLog = (o) => (
-    console.info("You now have `minus.js` shortcuts under the global object `" + o + "`.")
-  );
-  
+  m.qp = (s, p) => {
+    const pa = m.apsc(m.qa(p));
+    (typeof s === 'string') && (s = m.q(s));
+    return pa.filter((n) => {
+      return (n.contains(s)) ? n : false;
+    })[0];
+  };
+
   if (!window.m) {
     window.m = m;
-    infoLog("m");
   } else if (!window.mi) {
     window.mi = m;
-    infoLog("mi");
   } else {
-    console.warn("You already have global objects named `m` & `mi`. \n `minus.js` has gracefully shown itself the door.");
+    window.min = m;
   }
 
   return m;
