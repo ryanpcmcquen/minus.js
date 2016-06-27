@@ -27,6 +27,8 @@ Modern JavaScript minus all the typing.
     
     `m.aspc` for `Array.prototype.slice.call`
 
+    `m.qp` for `queryParent`, taken from [here](https://github.com/ryanpcmcquen/queryparent).
+
   2. Make debugging apps from the console far faster. If using `minus` as a Chrome extension, you'll have access to all the `m` methods right from the browser `console`.
 
 Pull requests and feedback are welcome.
