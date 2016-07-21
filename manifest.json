@@ -5,7 +5,7 @@
 
   "name": "minus.js",
   "description": "A whole host of JS shortcuts, for the DOM hacker.",
-  "version": "0.4.0",
+  "version": "0.5.0",
 
   "content_scripts": [{
     "run_at": "document_end",

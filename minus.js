@@ -1,4 +1,4 @@
-/*! minus.js v0.4.0 by ryanpcmcquen */
+/*! minus.js v0.5.0 by ryanpcmcquen */
 /*jshint esversion:6*/
 (() => {
 
@@ -29,19 +29,33 @@
   m.eqsa = m.eqa;
 
   m.qp = (s, p) => {
-    const pa = m.apsc(m.qa(p));
+    const pa = m.qa(p);
     (typeof s === 'string') && (s = m.q(s));
-    return pa.filter((n) => {
+    return [...pa].filter((n) => {
       return (n.contains(s)) ? n : false;
-    })[0];
+    }).pop();
+  };
+
+  m.qsi = {
+    _qs: (e, s, t) => {
+      (t === 'p') ? (t = 'previous') : (t = 'next');
+      (typeof e === 'string') && (e = m.q(e));
+      const sa = (m.eqa(e.parentNode, s));
+      const ps = (s) => s[`${t}ElementSibling`];
+      return [...sa].filter((i) => (ps(e) === i) ? i : ps(ps(i))).pop();
+    },
+    p: (e, s) => m.qsi._qs(e, s, 'p'),
+    n: (e, s) => m.qsi._qs(e, s, 'n')
   };
 
   if (!window.m) {
     window.m = m;
   } else if (!window.mi) {
     window.mi = m;
-  } else {
+  } else if (!window.min) {
     window.min = m;
+  } else {
+    window.minu = m;
   }
 
   return m;

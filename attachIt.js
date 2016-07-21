@@ -1,4 +1,4 @@
-/*! attachIt.js v0.4.0 by ryanpcmcquen */
+/*! attachIt.js v0.5.0 by ryanpcmcquen */
 /*jshint esversion:6*/
 (() => {
   'use strict';
